@@ -1,0 +1,37 @@
+<ion-view view-title="Proceso">
+  <ion-content>
+    <div class="list">
+    	<form novalidate>
+    		
+			<label class="item item-input">
+			  <span class="input-label">Cateto a</span>
+			  <input type="number" ng-model="vm.catetos.a">
+
+			</label>
+			<label ng-if="vm.inicio" class="item item-input">
+			  <span class="input-label">Cateto b</span>
+			  <input type="number" ng-model="vm.catetos.b">
+			</label>
+			<label  class="item item-input">
+			  <span class="input-label">Cateto c</span>
+			  <input type="number" ng-model="vm.catetos.c">
+			</label >
+			
+    	</form>
+    </div>
+    <div class="card">
+	  <div class="item item-text-wrap">
+	   <p>Semiperimetro: {{vm.s | number:4}}</p>
+    	<p>Area: {{vm.A | number:4}}</p>
+    	<h2>Area Total: {{vm.ATotal | number:4}}</h2>
+    	<h3>Perimetro Total: {{vm.perimetroTotal}}</h3>
+	  </div>
+	  <img src="img/triangulo.png">
+	</div>
+  <div class="button-bar bar-footer">
+	  <a ng-click="vm.calcular()" class="button  ion-calculator button-balanced"></a>
+	  
+	  <a ng-click="vm.clear()" class="button  ion-backspace-outline button-energized"></a>
+	</div> 	
+  </ion-content>
+</ion-view>
